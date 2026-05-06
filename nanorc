@@ -1,0 +1,15 @@
+# Loc: ./config/nano/nanorc
+
+bind ^F forward main
+bind ^B back main
+set atblanks
+set bookstyle
+set minibar
+set mouse
+set nohelp
+set nonewlines
+set positionlog
+set quickblank
+set softwrap
+set tabsize 2
+set tabstospaces
