@@ -1,4 +1,15 @@
 # Loc: ./config/nano/nanorc
+# Themes: git clone https://github.com/serialhex/nano-highlight ~/.nano
+
+include "~/.nano/nanorc.nanorc"
+include "~/.nano/markdown.nanorc"
+include "~/.nano/html.nanorc"
+include "~/.nano/js.nanorc"
+include "~/.nano/css.nanorc"
+include "~/.nano/python.nanorc"
+include "~/.nano/lua.nanorc"
+include "~/.nano/toml.nanorc"
+include "~/.nano/conf.nanorc"
 
 bind ^F forward main
 bind ^B back main
