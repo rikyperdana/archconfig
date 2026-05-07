@@ -5,6 +5,10 @@ alias copy="xclip -selection clipboard"
 alias chw="feh --bg-fill --randomize --recursive ~/Pictures/Wallpapers/aesthetic-wallpapers"
 alias scrot="scrot -d b5" # screenshot after 5s
 alias susp="sudo systemctl suspend"
+alias mount="udiskie-mount -a"
+alias unmount="udiskie-umount -a"
+alias temp="watch -n 1 sensors"
+alias pico8="~/Games/pico-8/pico8"
 
 # Default aliases
 [[ $- != *i* ]] && return # Stop if not running
