@@ -1,5 +1,5 @@
-# Loc: ./config/nano/nanorc
 # Themes: git clone https://github.com/serialhex/nano-highlight ~/.nano
+# Loc: ./config/nano/nanorc
 
 include "~/.nano/nanorc.nanorc"
 include "~/.nano/markdown.nanorc"

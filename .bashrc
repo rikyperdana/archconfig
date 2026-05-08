@@ -9,6 +9,8 @@ alias mount="udiskie-mount -a"
 alias unmount="udiskie-umount -a"
 alias temp="watch -n 1 sensors"
 alias pico8="~/Games/pico-8/pico8"
+alias light+="brightnessctl set 10%+"
+alias light-="brightnessctl set 10%-"
 
 # Default aliases
 [[ $- != *i* ]] && return # Stop if not running
