@@ -1,5 +1,3 @@
--- Loc: ~/.config/awesome/theme.lua
-
 local beautiful = require("beautiful")
 local xresources = require("beautiful.xresources")
 local themes_path = "/usr/share/awesome/themes/default/"
@@ -19,7 +17,7 @@ local theme = {
     taglist_squares_sel = nil,
     taglist_squares_unsel = nil,
 
-    -- Layout icons
+    -- Layout Icons
     layout_fairh = themes_path .. "layouts/fairhw.png",
     layout_fairv = themes_path .. "layouts/fairvw.png",
     layout_floating = themes_path .. "layouts/floatingw.png",
@@ -37,6 +35,11 @@ local theme = {
     layout_cornerne = themes_path .. "layouts/cornernew.png",
     layout_cornersw = themes_path .. "layouts/cornersww.png",
     layout_cornerse = themes_path .. "layouts/cornersew.png",
+
+    -- Keybindings Font
+    hotkeys_font = "GohuFont11NerdFont",
+    hotkeys_description_font = "GohuFont11NerdFont",
+
 }
 
 return theme
