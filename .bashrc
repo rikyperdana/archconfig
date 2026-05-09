@@ -12,6 +12,8 @@ alias pico8="~/Games/Pico8/pico8"
 alias light+="brightnessctl set 10%+"
 alias light-="brightnessctl set 10%-"
 alias venv="source ~/.venv/bin/activate"
+alias ytmp3="yt-dlp -x --audio-format mp3"
+alias mpv3="mpv --display-tags=false --no-video"
 
 # Git commands
 alias gitpass="cat ~/Github/.password | xclip -selection clipboard"
