@@ -1,3 +1,5 @@
+# To Update this system from repo
+
 cp .bashrc ~/
 cp alacritty.toml ~/.config/alacritty/
 cp nanorc ~/.config/nano/

@@ -13,7 +13,9 @@ alias light+="brightnessctl set 10%+"
 alias light-="brightnessctl set 10%-"
 alias venv="source ~/.venv/bin/activate"
 
+# Git commands
 alias gitpass="cat ~/Github/.password | xclip -selection clipboard"
+alias gitpush="git add -A && git commit -m "update" && git push"
 
 # Default aliases
 [[ $- != *i* ]] && return # Stop if not running
