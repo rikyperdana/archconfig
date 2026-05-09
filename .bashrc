@@ -13,6 +13,8 @@ alias light+="brightnessctl set 10%+"
 alias light-="brightnessctl set 10%-"
 alias venv="source ~/.venv/bin/activate"
 
+alias gitpass="cat ~/Github/.password | xclip -selection clipboard"
+
 # Default aliases
 [[ $- != *i* ]] && return # Stop if not running
 # alias ls='ls --color=auto'
