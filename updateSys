@@ -1,0 +1,12 @@
+cp .bashrc ~/
+cp alacritty.toml ~/.config/alacritty/
+cp nanorc ~/.config/nano/
+cp picom.conf ~/.config/picom/
+cp rc.lua ~/.config/awesome/
+cp theme.lua ~/.config/awesome/
+cp tmux.conf ~/.config/tmux/
+
+cat ../.password | copy
+git add -A
+git commit -m "update"
+git push

@@ -1,0 +1,7 @@
+cp ~/.bashrc ./
+cp ~/.config/alacritty/alacritty.toml ./
+cp ~/.config/nano/nanorc ./
+cp ~/.config/picom/picom.conf ./
+cp ~/.config/awesome/rc.lua ./
+cp ~/.config/awesome/theme.lua ./
+cp ~/.config/tmux/tmux.conf ./

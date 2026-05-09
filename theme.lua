@@ -1,3 +1,5 @@
+-- Loc: ~/.config/awesome/themes.lua
+
 local beautiful = require("beautiful")
 local xresources = require("beautiful.xresources")
 local themes_path = "/usr/share/awesome/themes/default/"
