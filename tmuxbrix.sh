@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 1 & 12. Start by renaming the initial window
+# 1. Start by renaming the initial window
 tmux rename-window 'Brix'
 
 # 2. Slice twice horizontally (prefix + ")
