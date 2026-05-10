@@ -1,4 +1,6 @@
-iwctl device list &&
-iwctl station wlan2 scan &&
-iwctl station wlan2 get-networks &&
-iwctl station wlan2 connect RIMEL
+device=$(iw dev | grep "wlan")
+num=${device: -1}
+
+iwctl station "wlan$num" scan
+iwctl station "wlan$num" get-networks
+iwctl station "wlan$num" connect RIMEL
