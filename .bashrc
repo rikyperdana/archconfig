@@ -24,10 +24,10 @@ alias ytmp3="yt-dlp -x --audio-format mp3"
 alias ytstr="mpv --ytdl-format='bestvideo[height<=240]+bestaudio/best'"
 
 # From and To Markdown
-doc2md() { # tomd file.docx file.md
+doc2md() { # doc2md file.docx file.md
   markitdown "$1" > "${1%.*}.md"
 }
-md2doc() {
+md2doc() { # md2doc file.md file.docx
   if [ -n "$3" ]; then
     pandoc "$1" --reference-doc="$3" -o "$2"
   else
