@@ -12,12 +12,16 @@ alias pico8="~/Games/Pico8/pico8"
 alias light+="brightnessctl set 10%+"
 alias light-="brightnessctl set 10%-"
 alias venv="source ~/.venv/bin/activate"
-alias ytmp3="yt-dlp -x --audio-format mp3"
 alias mpv3="mpv --display-tags=false --no-video"
+alias htop="htop --no-function-bar -p 0"
 
 # Git commands
 alias gitpass="cat ~/Github/.password | xclip -selection clipboard"
 alias gitpush="git add -A && git commit -m "update" && git push"
+
+# Youtube
+alias ytmp3="yt-dlp -x --audio-format mp3"
+alias ytstr="mpv --ytdl-format='bestvideo[height<=240]+bestaudio/best'"
 
 # Default aliases
 [[ $- != *i* ]] && return # Stop if not running
