@@ -13,7 +13,7 @@ alias light+="brightnessctl set 10%+"
 alias light-="brightnessctl set 10%-"
 alias venv="source ~/.venv/bin/activate"
 alias mpv3="mpv --display-tags=false --no-video"
-alias htop="htop --no-function-bar -p 0"
+alias htopi="htop --no-function-bar -p 0"
 
 # Git commands
 alias gitpass="cat ~/Github/.password | xclip -selection clipboard"
@@ -22,6 +22,14 @@ alias gitpush="git add -A && git commit -m "update" && git push"
 # Youtube
 alias ytmp3="yt-dlp -x --audio-format mp3"
 alias ytstr="mpv --ytdl-format='bestvideo[height<=240]+bestaudio/best'"
+
+# From and To Markdown
+tomd() { # tomd file.docx file.md
+  markitdown "$1" > "${1%.*}.md"
+}
+frommd() { # frommd file.md file.docx
+  pandoc "$1" -o "$2"
+}
 
 # Default aliases
 [[ $- != *i* ]] && return # Stop if not running
