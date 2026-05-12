@@ -59,6 +59,16 @@ search() { # search keyword location
   --bind 'enter:execute(nano {})'
 }
 
+# PDF edit
+pdf-merge() { # pdf-merge file1 file2 ... resFile
+  local output="${@: -1}"
+  local inputs=("${@:1:$#-1}")
+  qpdf --empty --pages "${inputs[@]}" -- "$output"
+}
+pdf-keep() { # pdf-keep input "1-5,8-z" output
+  qpdf "$1" --pages . "$2" -- "$3"
+}
+
 # Default aliases
 [[ $- != *i* ]] && return
 # alias ls='ls --color=auto'
