@@ -16,6 +16,7 @@ alias htopi="htop --no-function-bar"
 alias connect="~/Github/Configs/connect.sh"
 alias tmuxbrix="~/Github/Configs/tmuxbrix.sh"
 alias webhome="firefox gemini.google.com web.whatsapp.com &"
+alias fixspaces="find . -depth -name '* *' -exec rename 's/ /_/g' {} +"
 
 # Git commands
 alias gitpass="cat ~/Github/.password | xclip -selection clipboard"
@@ -49,6 +50,13 @@ md2doc() { # md2doc file.md file.docx
   else
     pandoc "$1" -o "$2"
   fi
+}
+
+# Text Search
+search() { # search keyword location
+  [ "$#" -gt 0 ] && grep -rl "$1" "${@: -1}" \
+  | head -n 100 | fzf --preview 'cat {}' \
+  --bind 'enter:execute(nano {})'
 }
 
 # Default aliases
