@@ -54,7 +54,7 @@ md2doc() { # md2doc file.md file.docx
 
 # Text Search
 search() { # search keyword location
-  [ "$#" -gt 0 ] && grep -rl "$1" "${@: -1}" \
+  [ "$#" -gt 0 ] && grep -rl "$1" "${2:-.}" \
   | head -n 100 | fzf --preview 'cat {}' \
   --bind 'enter:execute(nano {})'
 }
