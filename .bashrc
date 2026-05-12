@@ -23,8 +23,19 @@ alias gitpush="git add -A && git commit -m "update" && git push"
 
 # Youtube
 alias mpv3="mpv --display-tags=false --no-video"
-alias ytmp3="yt-dlp -x --audio-format mp3"
-alias ytstr="mpv --ytdl-format='bestvideo[height<=240]+bestaudio/best'"
+alias yt-mp3="yt-dlp -x --audio-format mp3"
+yt-save() {
+  yt-dlp "ytsearch10:$1" --flat-playlist \
+    --print "%(title)s  [%(uploader)s]  (%(duration_string)s)  %(id)s" | \
+    fzf --with-nth=1..-2 | awk '{print $NF}' | xargs -I {} yt-dlp -f \
+    "bestvideo[height<=?480]+bestaudio/best[height<=?480]/best" "https://youtu.be/{}"
+}
+yt-stream() {
+  yt-dlp "ytsearch10:$1" --flat-playlist \
+    --print "%(title)s  [%(uploader)s]  (%(duration_string)s)  %(id)s" | \
+    fzf --with-nth=1..-2 | awk '{print $NF}' |  xargs -I {} mpv --quiet \
+    --ytdl-format="[height<=480]" "https://youtu.be/{}" > /dev/null 2>&1
+}
 
 # From and To Markdown
 doc2md() { # doc2md file.docx file.md
