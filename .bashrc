@@ -34,10 +34,21 @@ yt-save() {
     "https://youtu.be/{}"
 }
 yt-stream() {
-  yt-dlp "ytsearch25:$1" --flat-playlist \
-    --print "%(title)s  [%(uploader)s]  (%(duration_string)s)  %(id)s" | \
-    fzf --with-nth=1..-2 | awk '{print $NF}' | xargs -I {} mpv --quiet \
-    --ytdl-format="[height<=?480]" "https://youtu.be/{}" > /dev/null 2>&1
+  local results
+  results=$(yt-dlp "ytsearch25:$1" --flat-playlist \
+    --print "%(title)s  [%(uploader)s]  (%(duration_string)s)  %(id)s")
+  while true; do
+    local selection
+    selection=$(echo "$results" | fzf --with-nth=1..-2 --header "Select a video (ESC to quit):")
+    [[ -z "$selection" ]] && break
+    local video_id
+    video_id=$(echo "$selection" | awk '{print $NF}')
+    local video_url="https://youtu.be/$video_id"
+    echo "Playing: $(echo "$selection" | sed 's/ [^ ]*$//')"
+    mpv --quiet --ytdl-format="[height<=?480]" "$video_url" > /dev/null 2>&1
+    echo "$video_url" | xclip -selection clipboard
+    # feel free to yt-dlp pasted_url
+  done
 }
 
 # From and To Markdown
