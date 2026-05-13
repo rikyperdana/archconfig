@@ -17,6 +17,7 @@ alias connect="~/Github/Configs/connect.sh"
 alias tmuxbrix="~/Github/Configs/tmuxbrix.sh"
 alias webhome="firefox gemini.google.com web.whatsapp.com &"
 alias fixspaces="find . -depth -name '* *' -exec rename 's/ /_/g' {} +"
+alias chat="irssi --connect='-ssl irc.hackint.org' -p 6697 -n mentegaoles"
 
 # Git commands
 alias gitpass="cat ~/Github/.password | xclip -selection clipboard"
