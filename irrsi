@@ -1,0 +1,3 @@
+irssi # from terminal
+/connect OFTC
+/msg NickServ IDENTIFY <pwd> rikyperdana
