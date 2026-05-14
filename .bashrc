@@ -5,6 +5,7 @@ alias copy="xclip -selection clipboard"
 alias chw="feh --bg-fill --randomize --recursive ~/Pictures/Wallpapers"
 alias scrot="scrot -d b5" # screenshot after 5s
 alias susp="sudo systemctl suspend"
+alias logoff="echo 'awesome.quit()' | awesome-client"
 alias mount="udiskie-mount -a"
 alias unmount="udiskie-umount -a"
 alias temp="watch -n 1 sensors"
@@ -86,3 +87,6 @@ pdf-keep() { # pdf-keep input "1-5,8-z" output
 # alias ls='ls --color=auto'
 # alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
+
+# Exports
+export EDITOR="nano"

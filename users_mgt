@@ -1,0 +1,5 @@
+sudo useradd -m -G wheel cloneN
+sudo passwd cloneN
+sudo EDITOR=nano visudo
+
+sudo userdel -r cloneN
