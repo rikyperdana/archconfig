@@ -26,7 +26,8 @@ alias gitpush="git add -A && git commit -m "update" && git push"
 # Youtube
 alias mpv4="mpv --really-quiet"
 alias mpv3="mpv --display-tags=false --no-video"
-alias yt-mp3="yt-dlp -x --audio-format mp3"
+alias yt-mus="yt-dlp -x --audio-format mp3"
+alias yt-vid="yt-dlp -f 'worstvideo+worstaudio/worst'"
 yt-save() {
   yt-dlp "ytsearch25:$1" --flat-playlist \
     --print "%(title)s  [%(uploader)s]  (%(duration_string)s)  %(id)s" | \
