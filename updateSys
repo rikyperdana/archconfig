@@ -1,5 +1,10 @@
-# To Update this system from repo
+# Initiate folders
+cd ~/.config
+mkdir alacritty nano picom awesome tmux
+mkdir -p ~/.local/bin
+cd ~
 
+# To update this system from repo
 cp .bashrc ~/
 cp alacritty.toml ~/.config/alacritty/
 cp nanorc ~/.config/nano/
@@ -7,3 +12,4 @@ cp picom.conf ~/.config/picom/
 cp rc.lua ~/.config/awesome/
 cp theme.lua ~/.config/awesome/
 cp tmux.conf ~/.config/tmux/
+cp yt ~/.local/bin
